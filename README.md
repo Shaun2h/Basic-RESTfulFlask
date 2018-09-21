@@ -1,8 +1,8 @@
 # basic RESTful on flask
-## -uses flask <br> 
-## -uses flask-restful<br>
-## -LOCAL ONLY<br> 
-## -DOES NOT CONTAIN HTML PAGES <br>
+### -uses flask <br> 
+### -uses flask-restful<br>
+### -LOCAL ONLY<br> 
+### -DOES NOT CONTAIN HTML PAGES <br>
 
 set FLASK_APP=hello.py<br> 
 set FLASK_DEBUG=1<br> 
