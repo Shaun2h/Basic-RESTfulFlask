@@ -14,7 +14,7 @@ from flask_restful import Resource, Api
 # that's for curl, POST
 
 
-# set FLASK_APP=hello.py
+# set FLASK_APP=Start.py
 # set FLASK_DEBUG=1
 # python -m flask run
 # export if on linux.
@@ -53,11 +53,14 @@ def failed_Auth():
     # resp.headers['WWW-Authenticate'] = 'Basic realm="Example"'
     return resp
 
-@app.route("/login",methods = ["POST"]) #basic test of POST
+@app.route("/login",methods = ["GET"]) #basic test of POST
 @authenticationcheck  # POST METHOD. ECHOES YOUR POSTED JSON
 #also of note is that this @authenticationcheck forces authentication.
 def loginstuff():
-    return request.data
+    resp = jsonify({"GET SUCCESS":"YES"})
+    resp.status_code=200
+    return resp
+    #return request.data
 
 
 # curl -v -H "Content-type: application/json" -H "Accept: application/json" http://127.0.0.1:5000/users/1  -d "{"data1":"noot", "data2":"noot"}"
@@ -90,7 +93,7 @@ class manythings(Resource):
             resp = jsonify("")
             resp.data =request.data
             resp.header="aha"
-            resp.status_code = 405
+            resp.status_code = 300
             return resp
     def delete(self,ID): # curl http://127.0.0.1:5000/users/1 -X DELETE -v
         if(ID in list(initialisedSTORAGE.keys())):
