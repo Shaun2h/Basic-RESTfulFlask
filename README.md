@@ -1,8 +1,8 @@
 # Basic RESTful on flask for Networks Lab
 ### Requirements
-Python >= 3.4 || 2.7
-Flask >= 1.01
-flask-restful >= 0.3.7
+Python >= 3.4 || 2.7 <br>
+Flask >= 1.01<br>
+flask-restful >= 0.3.7<br>
 ### Setup
 ```
 Python -m pip install Flask
